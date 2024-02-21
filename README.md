@@ -21,3 +21,5 @@
 -diff build for dev and production.
 
 -Bundlers along with react make it optimized and fast
+#BROWSERSLIST
+https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
