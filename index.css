@@ -21,3 +21,11 @@
     margin:10px;
     
 }
+.res-card{
+    width: 200px;
+    height:300px;
+    border: 2px solid black;
+}
+.Search{
+    padding:10px;
+}
