@@ -19,9 +19,7 @@ import ReactDOM from 'react-dom/client';
  * 
  */
 
-const stylecard={
-    backgroundColor:"#f0f0f0"
-}
+
 const Header =()=>{
     return(
         <div className="header">
@@ -45,8 +43,17 @@ const Header =()=>{
 
 const RestaurantCard = () =>{
     return(
-        <div className="res-card" style={stylecard}>
+        <div className="res-card" style={{
+            backgroundColor:"#f0f0f0"
+        }}>
+            <img 
+            className="res-logo"
+            alt="res-logo" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxYUb82L3RX5dgbZ_sPnFJGziaA3O3nqMQw&usqp=CAU"/>
             <h3>Vrindavan Restaurant</h3>
+            <h4>Biryani, North Indian, Asian </h4>
+            <h4>4.4 stars</h4>
+            <h4>38 minutes</h4>
         </div>
     )
 };
@@ -58,6 +65,26 @@ const Body = () => {
                 Search
             </div>
             <div className="res-container">
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
                 <RestaurantCard/>
             </div>
         </div>
