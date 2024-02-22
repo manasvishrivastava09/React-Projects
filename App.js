@@ -41,7 +41,7 @@ const Header =()=>{
     )
 };
 
-const RestaurantCard = () =>{
+const RestaurantCard = ({resName,cuisine,stars,delTime}) =>{
     return(
         <div className="res-card" style={{
             backgroundColor:"#f0f0f0"
@@ -50,10 +50,10 @@ const RestaurantCard = () =>{
             className="res-logo"
             alt="res-logo" 
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxYUb82L3RX5dgbZ_sPnFJGziaA3O3nqMQw&usqp=CAU"/>
-            <h3>Vrindavan Restaurant</h3>
-            <h4>Biryani, North Indian, Asian </h4>
-            <h4>4.4 stars</h4>
-            <h4>38 minutes</h4>
+            <h3>{resName}</h3>
+            <h4>{cuisine}</h4>
+            <h4>{stars}</h4>
+            <h4>{delTime}</h4>
         </div>
     )
 };
@@ -65,27 +65,8 @@ const Body = () => {
                 Search
             </div>
             <div className="res-container">
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
+                <RestaurantCard resName="Vrindavan Restaurant" cuisine="Biryani, North Indian, Asian " stars="4.4 stars" delTime="38 minutes"/>
+                <RestaurantCard resName="KFC" cuisine="Burger, French Fries" stars="4.6 stars" delTime="60 minutes"/>
             </div>
         </div>
     )
