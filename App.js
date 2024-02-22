@@ -13,19 +13,16 @@ const heading = (
 //Functional Component - NEW
 
 //React Functional Component
-const HeadingComponent = () =>{
-    return <h1>Namaste React Functional Component</h1>;
-};
 
-const HeadingComponents =()=>{
+const HeadingComponent=()=>(
     <div id="container">
         <h1>Namaste React Functional component</h1>
     </div>
 
-};
+);
 
 const root = ReactDOM.createRoot
 (document.getElementById("root"));
 
-root.render(heading);
+root.render(<HeadingComponent/>);
 
