@@ -1,6 +1,6 @@
-#my React project 
+# my React project 
 
-#Parcel
+# Parcel
 
 -Dev Build
 -Local Server
@@ -21,5 +21,36 @@
 -diff build for dev and production.
 
 -Bundlers along with react make it optimized and fast
-#BROWSERSLIST
+# BROWSERSLIST
 https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
+# Yummy
+/**
+ * Header
+ *  -Loop
+ *  -Nav Items
+ * Body
+ *  -Search
+ *  -RestaurantContainer
+ *      -RestaurantsCard
+ *          -Img
+ *          -Name of Res, Star Rating, cusine, delery tie
+ * Footer
+ *  -Copyright
+ *      -Links
+ *      -Address
+ *  -Contact
+ * 
+ */
+
+ # Two types of export/import
+
+ - Default Export/Import
+
+ export default Component;
+ import Component from "path";
+
+ - Named Export/Import
+
+ export const Component;
+ import {Component} from "path";
