@@ -54,7 +54,14 @@
     display: flex;
     flex-wrap: wrap;
 }
+.button-shimmer{
+    width: 150px;
+    height:30px;
+    margin: 5px;
+    background-color: #f0f0f0;
+}
 .shimmer-cards{
+    
     width:200px;
     height:400px;
     background-color: #f0f0f0; ;
