@@ -54,3 +54,14 @@ https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
 
  export const Component;
  import {Component} from "path";
+
+
+ # Hooks
+
+ (Normal javascript utility function)
+ useState - Super powerful React variables in React
+            We import it using nameimport {}
+            import {useState} from 'react';
+            Its a state variable  as it maintains the state of our component
+
+ useEffect
