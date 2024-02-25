@@ -71,3 +71,14 @@
     padding: 0 20px;
     cursor:pointer;
 }
+.search-box{
+    margin:10px;
+    height: 20px;
+
+}
+.searchBtn{
+    padding:4px 6px;
+}
+.filter{
+    display: flex;
+}
