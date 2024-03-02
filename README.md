@@ -65,3 +65,21 @@ https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
             Its a state variable  as it maintains the state of our component
 
  useEffect
+
+ # types of routing
+ 1-serverside routing
+ Server side routing means , make a netwrk call, the about us page is coming from server.
+
+ 2-client side routing-
+ this is client side routing , we are not making any network calls  , because when i load the app it already has the code for about us. it just loads the component.
+ If i go to contact page it loads the contact page component over here. it does not make any network calls, 
+ the only network call is made when i make  a network call in the api.
+
+ Single page application - single page just the components getting interchanged.
+
+ # dynamic route
+
+ we have dynamic route for every restaurant that we have
+  after that dynamic route , api call has been made.
+
+  
