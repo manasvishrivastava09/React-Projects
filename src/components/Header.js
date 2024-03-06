@@ -9,30 +9,30 @@ const Header =()=>{
   
 
   return (
-    <div className="header">
+    <div className="flex justify-between shadow-lg bg-slate-400  m-2">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <img className="object-contain h-21 w-40" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status :{onlineStatus ? '🟢' : '🔴'}</li>
-          <li>
+      <div className="flex items-center">
+        <ul className="flex p-6 m-4">
+          <li className="px-4">Online Status :{onlineStatus ? '🟢' : '🔴'}</li>
+          <li className="px-4">
             <Link to="/">🏠Home</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about">📰About Us</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact">📪Contact Us</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery">🧺Grocery</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/cart">🛒Cart</Link>
           </li>
           <button
-            className="login"
+            className="login px-4"
             onClick={() => {
               btnNameReact === 'Login'
                 ? setbtnNameReact('Logout')
