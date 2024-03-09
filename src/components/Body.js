@@ -1,4 +1,4 @@
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard,{withPromotedLabel} from './RestaurantCard';
 import { useState, useEffect } from 'react';
 import { resList } from '../utils/mockData';
 import Shimmer from './Shimmer';
@@ -11,6 +11,8 @@ const Body = () => {
   let [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setsearchText] = useState('');
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -45,7 +47,7 @@ const Body = () => {
   return !listOfRestaurants?.length ? (
     <Shimmer />
   ) : (
-    <div className="Body">
+    <div className="Body bg-gray-500">
       <div className="filter flex">
         <div className="search m-4 p-4">
           <input
@@ -90,10 +92,13 @@ const Body = () => {
             key={restaurant.info.id}
             to={'/restaurants/' + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.aggregatedDiscountInfoV3?.header ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
-        {console.log(listOfRestaurants)}
       </div>
     </div>
   );

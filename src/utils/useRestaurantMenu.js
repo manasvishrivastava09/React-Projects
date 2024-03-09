@@ -18,8 +18,7 @@ const useRestaurantMenu = (restaurantId)=>{
       
     const { contents } = await data.json();
     const json = JSON.parse(contents);
-    console.log(json);
-       // const json = await data.json();
+   
         setResInfo(json.data);
     };
     return resInfo;

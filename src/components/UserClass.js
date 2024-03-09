@@ -24,21 +24,15 @@ class UserClass extends React.Component{
         });
     }
 
-    componentDidUpdate(){
-        console.log("did update");
-    }
-    componentWillUnmount(){
-        console.log("ComponentWillUnmount");
-    }
     render(){
 
         const {name,location,avatar_url} = this.state.userInfo;
         return (
-          <div className="user-card">
+          <div className="user-card m-9 h-96 w-96 ">
             <img className="prof-img" src= {avatar_url}/>
-            <h2>Name: {name}</h2>
-            <h3>Location: {location}</h3>
-            <h4>Contact: @manasvi09</h4>
+            <h2 className="font-bold"> {name}</h2>
+            <h3 className="font-bold"> {location}</h3>
+            <h4 className="font-bold"> @manasvishrivastava09</h4>
           </div>
         );
     }
