@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import Cart from './components/Cart';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+import { useState,useEffect } from 'react';
+import UserContext from './utils/UserContext';
 //import Grocery from './components/Grocery';
 
 
@@ -24,11 +26,23 @@ const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(()=>import("./components/About"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  //authentication
+  useEffect(()=>{
+    //Make an API clall and send username and password
+    const data ={
+      name:"Manasvi Shrivastava"
+    }
+    setUserName(data.name);
+  },[])
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
