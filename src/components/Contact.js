@@ -1,11 +1,3 @@
-// const Contact = () =>{
-//     return(
-//         <div>Contact</div>
-//     );
-// };
-
-// export default Contact;
-
 import React from 'react';
 import { useState } from 'react';
 
@@ -32,7 +24,7 @@ function Contact() {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+      <h2 className="text-2xl font-bold text-center mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label
