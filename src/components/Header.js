@@ -21,24 +21,23 @@ const Header = () => {
       </div>
       <div className="flex items-center">
         <ul className="flex p-6 m-4">
-          <li className="px-4">Online Status :{onlineStatus ? '🟢' : '🔴'}</li>
-          <li className="px-4">
+          <li className="px-4 font-semibold">
             <Link to="/">🏠Home</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-semibold">
             <Link to="/about">📰About Us</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-semibold">
             <Link to="/contact">📪Contact Us</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-semibold">
             <Link to="/grocery">🧺Grocery</Link>
           </li>
-          <li className="px-4 font-bold text-xl">
-            <Link to="/cart">🛒Cart ({cartItems.length} - items) </Link>
+          <li className="px-4 font-semibold">
+            <Link to="/cart">🛒Cart ({cartItems.length}) </Link>
           </li>
           <button
-            className="login px-4"
+            className="login px-4 font-semibold"
             onClick={() => {
               btnNameReact === 'Login'
                 ? setbtnNameReact('Logout')
@@ -47,7 +46,8 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
-          <li className="px-4 font-bold">{loggedInUser}</li>
+          <li className="px-4 font-semibold">{loggedInUser}</li>
+          <li className="px-4">{onlineStatus ? 'Online 🟢' : 'Offline 🔴'}</li>
         </ul>
       </div>
     </div>

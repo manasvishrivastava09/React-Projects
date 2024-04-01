@@ -89,4 +89,55 @@ https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
 - Slice (cartSlice)
 - dispatch(action)
 - Selector
+
+#### Types of testing a (developer) can do
+
+- Unit testing - 
+test one react component in isolation
+
+- Integration Testing - 
+testing the integration of component
+
+- End to end testing -e2e testing - 
+testing the application when the user start the website till the user closes the website- tools syplus, selenium, puppetier
   
+
+  we use react testing library
+  build on top of DOM testing library
+parcel is bundler
+Routing - react router dom
+Testing - react testing library
+state management - redux
+bundling - parcel
+
+# React Testing library uses JEST
+
+# Setting up testing in our app
+- Install React Testing Library
+- Install Jest
+- Install babel dependencies
+- Configure Babel
+- (Babel is a transpiller and parcel uses it)
+- Configure Pracel Config file to disable default babel transpilation
+- Jest configuration
+# (npm run test)
+
+jsdom when you write/run test cases ther is no server/browser running, so they will need a runtime.
+
+-Jest - npx jest --init
+- Install jsdom library
+
+__ = dunder
+
+create a folder__tests__ anywhere inside the project folder.
+the files insideit should be of the form
+
+fileName.test.ts
+fileName.test.js
+fileName.spec.ts
+fileName.spec.js
+
+- Install @babel/preset-react to make JSX run in test cases.
+- Include @babel/preset-react in babel config
+- to add ToBeInTheDocument 
+@testing-library/jest-dom

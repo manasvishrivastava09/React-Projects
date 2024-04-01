@@ -1,8 +1,10 @@
 import {CDN_URL} from '../../src/utils/constants'
 
 const RestaurantCard = (props) =>{
+ 
 const {resData}=props;
 
+console.log(resData);
 const {cloudinaryImageId,name, cuisines,costForTwo,avgRating}
 =resData?.info;
 return(
@@ -27,7 +29,8 @@ export const withPromotedLabel = (RestaurantCard)=>{
     return(props)=>{
         return (
           <div>
-            <label className="absolute bg-black text-white m-2 p-2 rounded-lg opacity-70 ">Offer valid</label>
+            <label className="absolute bg-black text-white m-2 p-2 
+            rounded-lg opacity-70 ">Offer valid</label>
             <RestaurantCard {...props} />
           </div>
         );

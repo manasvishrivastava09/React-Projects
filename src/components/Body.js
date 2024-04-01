@@ -90,8 +90,8 @@ const Body = () => {
           </button>
         </div>
         <div className="search m-4 p-4 my-10">
-          <label>User Name </label>
-          <input className="border border-black p-2" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)}></input>
+          {/* <label>User Name </label>
+          <input className="border border-black p-2" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)}></input> */}
         </div>
       </div>
       <div className="flex flex-wrap">
