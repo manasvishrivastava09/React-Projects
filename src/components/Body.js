@@ -46,7 +46,7 @@ const Body = () => {
       </h1>
     );
 
-    const {loggedInUser, setUserName} =useContext(UserContext);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   return !listOfRestaurants?.length ? (
     <Shimmer />
@@ -57,6 +57,7 @@ const Body = () => {
           <input
             type="text"
             className="search-box border border-solid border-black"
+            data-testid="searchInput"
             value={searchText}
             onChange={(e) => {
               setsearchText(e.target.value);
@@ -81,8 +82,11 @@ const Body = () => {
           <button
             className="px-4 py-2 bg-gray-100 m-4 rounded-lg"
             onClick={() => {
-              const filteredList = (listOfRestaurants =
-                listOfRestaurants.filter((res) => res.info.avgRating > 4));
+              const filteredList = listOfRestaurants.filter((res) => {
+                //res.info.avgRating > 4.5;
+                // console.log(res.info.avgRating);
+                return res.info.avgRating > 4.5;
+              });
               setListOfRestaurants(filteredList);
             }}
           >
@@ -113,3 +117,4 @@ const Body = () => {
 };
 
 export default Body;
+

@@ -13,6 +13,7 @@ const ItemList = ({ items }) => {
       <div>
         {items.map((item) => (
           <div
+          data-testid="foodItems"
             key={item.card.info.id}
             className="p-2 m-2 border-gray-200 border-b-2 text-left flex justify-between"
           >
@@ -42,9 +43,7 @@ const ItemList = ({ items }) => {
                 <button
                   className="p-2 mx-16 my-[100px] rounded-lg bg-black opacity-70 text-white shadow-lg"
                   onClick={() => handleAddItem(item)}
-                >
-                  Add +
-                </button>
+                >Add +</button>
               </div>
               <img src={CDN_URL + item.card.info.imageId} />
             </div>

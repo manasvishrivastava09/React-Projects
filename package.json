@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest",
+    "test": "jest --watchAll",
     "upload": "git push && npm run build && npm run s3upload",
     "s3upload": "aws s3 sync dist/ s3://swiggy-yummy --delete"
   },
